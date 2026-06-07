@@ -2,7 +2,7 @@ class Repoknife < Formula
   desc "Single-file bash TUI swiss-army-knife for a tree of git repos (gh/az/gitflow)"
   homepage "https://github.com/floriangrousset/repoknife"
   url "https://github.com/floriangrousset/repoknife/archive/refs/tags/v1.6.0.tar.gz"
-  sha256 "REPLACE_WITH_SHA256_OF_v1.6.0_TARBALL"
+  sha256 "6368e273de9e8b9ee36cf6bb1e88f8148dbb6e08cbf0ffb73f49d2edf38e9d9c"
   license "MIT"
   head "https://github.com/floriangrousset/repoknife.git", branch: "develop"
 
