@@ -24,24 +24,33 @@ class Repoknife < Formula
 
   def caveats
     <<~EOS
-      repoknife manages a tree of git repos under a "code root" folder —
-      treat ~/Code like Documents/Pictures/Music: a first-class home for code.
+      ╔═══════════════════════════════════════════════╗
+      ║   🔪  repoknife  ─────────────────────────▶   ║
+      ╚═══════════════════════════════════════════════╝
+           one blade for your whole tree of git repos
 
-        ~/Code/github/<org>/<repo>
-        ~/Code/gitlab/<org>/<project>/<repo>
-        ~/Code/azure-devops/<org>/<project>/<repo>
+      🌳  ~/Code is a first-class home for code
+          (treat it like Documents / Pictures / Music):
+            github/<org>/<repo>
+            gitlab/<org>/<project>/<repo>
+            azure-devops/<org>/<project>/<repo>
 
-      First run:
-        mkdir -p ~/Code
-        repoknife config            # set code_root (default: ~/Code)
+      🚀  First run
+            mkdir -p ~/Code
+            repoknife            # launch the TUI
+            repoknife config     # set code_root (default ~/Code)
 
-      Config lives at ~/.repoknife.conf (set REPOKNIFE_CFG_FILE to override).
+      ⚙️  Config & paths
+            ~/.repoknife.conf      config file  (REPOKNIFE_CFG_FILE relocates)
+            REPOKNIFE_CODE_ROOT    pin the code root anywhere
 
-      Optional tools:
-        az       Azure DevOps        (brew install azure-cli)
-        lazygit  health-screen shortcut
-        glab     GitLab CLI
-      Enable re-running failed Actions: gh auth refresh -s workflow
+      🧰  Optional sidekicks
+            az        Azure DevOps     brew install azure-cli
+            glab      GitLab CLI       brew install glab
+            lazygit   health 'g' jump  brew install lazygit
+
+      💡  Re-run failed Actions:  gh auth refresh -s workflow
+          Slice away  →  repoknife --help
     EOS
   end
 
